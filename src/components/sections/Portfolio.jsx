@@ -11,7 +11,11 @@ export default function Portfolio() {
 
   const slides = portfolioItems.map((item) => ({ src: item.src, alt: item.title }))
 
-  function openLightbox(index) {
+  function handleCardClick(item, index) {
+    if (item.link) {
+      window.open(item.link, '_blank', 'noopener,noreferrer')
+      return
+    }
     setLightboxIndex(index)
     setLightboxOpen(true)
   }
@@ -40,7 +44,7 @@ export default function Portfolio() {
                            hover:shadow-glass-md transition-shadow duration-300"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.25 }}
-                onClick={() => openLightbox(i)}
+                onClick={() => handleCardClick(item, i)}
               >
                 {/* Image */}
                 <div className="aspect-[4/3] overflow-hidden">
@@ -73,15 +77,22 @@ export default function Portfolio() {
                     </p>
                   </div>
 
-                  {/* Zoom icon */}
+                  {/* Top-right action icon */}
                   <div
                     className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full p-1.5
                                opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                    </svg>
+                    {item.link ? (
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M14 3h7v7m0-7L10 14m-4-4v8a2 2 0 002 2h8" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    )}
                   </div>
                 </div>
 
@@ -94,12 +105,6 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* CTA note */}
-        <ScrollReveal delay={0.3} className="text-center mt-10">
-          <p className="font-body text-rose-400 text-sm italic">
-            These are sample works — replace the images with your actual projects!
-          </p>
-        </ScrollReveal>
       </div>
 
       {/* Lightbox */}

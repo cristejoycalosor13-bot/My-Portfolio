@@ -1,5 +1,19 @@
 export const experiences = [
   {
+    id: 0,
+    title: 'Co-Creator & Editorial Lead',
+    company: 'Best of Cebu — Editorial Guide',
+    period: '2025 – Present',
+    location: 'Cebu, Philippines (Remote)',
+    responsibilities: [
+      'Co-founding Best of Cebu with my partner Brian — a curated, magazine-style guide to the Queen City of the South',
+      'Helping shape the editorial direction, voice, and visual identity for a photography-first travel and dining guide',
+      'Curating the launch roster of restaurants, cafés, and venues alongside the writing and review process',
+      'Coordinating photography, content scheduling, and pre-launch social media as the brand prepares for public release',
+      'Currently in development — public launch pending trademark approval',
+    ],
+  },
+  {
     id: 1,
     title: 'Freelance Social Media Manager',
     company: 'Local Businesses, Cebu',
