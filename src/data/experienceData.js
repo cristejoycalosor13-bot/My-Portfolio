@@ -4,7 +4,7 @@ export const experiences = [
     title: 'Freelance Social Media Manager',
     company: 'Local Businesses, Leyte',
     period: '2023 – Present',
-    location: 'Leyte, Philippines (Remote & On-site)',
+    location: 'Cebu, Philippines (Remote & On-site)',
     responsibilities: [
       'Manage Facebook and Instagram pages for 3+ small local businesses in Leyte',
       'Create and schedule content calendars using Canva and Meta Business Suite',

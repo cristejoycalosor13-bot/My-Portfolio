@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import FloralCorner from '../../assets/svgs/FloralCorner'
 
 const levelStyles = {
+  'College':          'bg-purple-100 text-purple-700 border-purple-200',
   'Elementary':       'bg-amber-100 text-amber-700 border-amber-200',
   'Junior High School': 'bg-pink-100 text-pink-700 border-pink-200',
   'Senior High School': 'bg-rose-100 text-rose-700 border-rose-200',

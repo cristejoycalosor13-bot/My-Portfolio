@@ -26,19 +26,19 @@ export default function Footer() {
             0929-841-5211
           </a>
           <a
-            href="mailto:christyjoycalosor13@gmail.com"
+            href="mailto:cristejoycalosor13@gmail.com"
             className="flex items-center gap-1.5 text-rose-300 hover:text-gold-DEFAULT transition-colors text-sm font-body"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
             </svg>
-            christyjoycalosor13@gmail.com
+            cristejoycalosor13@gmail.com
           </a>
         </div>
 
         <div className="w-24 h-px bg-rose-700 mx-auto mb-4" />
         <p className="font-body text-rose-400 text-xs">
-          © {year} Criste Joy Calosor · Made with love from Leyte, Philippines
+          © {year} Criste Joy Calosor · Made with love from Cebu, Philippines
         </p>
       </div>
     </footer>

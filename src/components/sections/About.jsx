@@ -35,7 +35,7 @@ export default function About() {
               <p className="font-display italic text-rose-600 text-sm font-semibold">
                 2nd Year College
               </p>
-              <p className="font-body text-rose-400 text-xs">Informatics Student</p>
+              <p className="font-body text-rose-400 text-xs">University of Cebu</p>
             </div>
           </div>
         </ScrollReveal>
@@ -51,14 +51,14 @@ export default function About() {
 
             <p className="font-body text-rose-700 leading-relaxed mb-4 text-sm md:text-base">
               Hello, I'm <span className="font-semibold text-rose-600">Criste Joy</span> — a passionate
-              Social Media Manager and aspiring Digital Marketing professional from the beautiful island
-              of <span className="font-semibold text-rose-600">Leyte, Philippines</span>.
+              Social Media Manager and aspiring Digital Marketing professional from the vibrant city of
+              <span className="font-semibold text-rose-600"> Cebu, Philippines</span>.
             </p>
             <p className="font-body text-rose-600 leading-relaxed mb-5 text-sm md:text-base">
-              Currently in my second year of college, I am dedicated to blooming into a versatile digital
-              storyteller who breathes life into brands through creative content and meaningful
-              connections. With a foundation in Informatics and a heart full of creativity, I believe
-              every brand has a story worth telling — beautifully.
+              Currently in my second year at the <span className="font-semibold text-rose-600">University of Cebu</span>,
+              I am dedicated to blooming into a versatile digital storyteller who breathes life into
+              brands through creative content and meaningful connections. With a foundation in Informatics
+              and a heart full of creativity, I believe every brand has a story worth telling — beautifully.
             </p>
 
             {/* Quote */}
@@ -70,7 +70,7 @@ export default function About() {
             <div className="flex flex-wrap gap-3">
               {[
                 { icon: '🎓', label: '2nd Year College' },
-                { icon: '📍', label: 'Leyte, Philippines' },
+                { icon: '📍', label: 'Cebu, Philippines' },
                 { icon: '✅', label: 'Available for Work' },
               ].map(({ icon, label }) => (
                 <span

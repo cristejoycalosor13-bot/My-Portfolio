@@ -23,8 +23,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'christyjoycalosor13@gmail.com',
-    href: 'mailto:christyjoycalosor13@gmail.com',
+    value: 'cristejoycalosor13@gmail.com',
+    href: 'mailto:cristejoycalosor13@gmail.com',
   },
   {
     icon: (
@@ -35,7 +35,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Location',
-    value: 'Leyte, Philippines',
+    value: 'Cebu, Philippines',
     href: null,
   },
 ]
