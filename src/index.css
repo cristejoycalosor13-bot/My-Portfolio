@@ -1,0 +1,66 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/600-italic.css";
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-blush-50 text-rose-950 font-body;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/80 shadow-glass rounded-2xl;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold text-rose-700 italic tracking-wide;
+  }
+  .btn-primary {
+    @apply inline-block bg-rose-500 text-white px-6 py-3 rounded-full font-body font-medium
+           hover:bg-rose-600 transition-all duration-300 shadow-md hover:shadow-lg
+           hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+  }
+  .btn-outline {
+    @apply inline-block border-2 border-rose-400 text-rose-600 px-6 py-3 rounded-full
+           font-body font-medium hover:bg-rose-50 transition-all duration-300 cursor-pointer;
+  }
+  .section-wrapper {
+    @apply max-w-6xl mx-auto px-6 py-20;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #f9a8d4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
