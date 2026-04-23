@@ -2,11 +2,11 @@ export const experiences = [
   {
     id: 1,
     title: 'Freelance Social Media Manager',
-    company: 'Local Businesses, Leyte',
+    company: 'Local Businesses, Cebu',
     period: '2023 – Present',
     location: 'Cebu, Philippines (Remote & On-site)',
     responsibilities: [
-      'Manage Facebook and Instagram pages for 3+ small local businesses in Leyte',
+      'Manage Facebook and Instagram pages for 3+ small local businesses in Cebu',
       'Create and schedule content calendars using Canva and Meta Business Suite',
       'Monitor post performance and prepare monthly engagement reports for clients',
       'Respond to comments, messages, and customer inquiries on a daily basis',
@@ -29,9 +29,9 @@ export const experiences = [
   {
     id: 3,
     title: 'Organization Secretary & Digital Documentarian',
-    company: 'Student Council — Liluan NHS',
+    company: 'Student Council — Lilo-an NHS',
     period: '2021 – 2022',
-    location: 'Liluan National High School',
+    location: 'Lilo-an National High School',
     responsibilities: [
       'Maintained official records of meetings, events, and council resolutions',
       'Digitized and organized all student council documents in Google Drive',
@@ -44,7 +44,7 @@ export const experiences = [
     title: 'Volunteer Data Encoder',
     company: 'Local Barangay Office',
     period: '2021',
-    location: 'Kabungahan, Villaba, Leyte',
+    location: 'Cabungahan, Villaba, Leyte',
     responsibilities: [
       'Encoded resident data and updated community records in Microsoft Excel',
       'Assisted staff with printing, filing, and organizing barangay documents',
