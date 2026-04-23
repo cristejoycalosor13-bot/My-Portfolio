@@ -1,6 +1,7 @@
 import ScrollReveal from '../ui/ScrollReveal'
 import FloralDivider from '../../assets/svgs/FloralDivider'
 import FloralCorner from '../../assets/svgs/FloralCorner'
+import aboutPhoto from '../../assets/criste-about.jpg'
 
 export default function About() {
   return (
@@ -20,14 +21,12 @@ export default function About() {
               style={{ transform: 'rotate(-3deg) scale(1.04)' }}
             />
             {/* Photo frame */}
-            <div className="relative bg-gradient-to-br from-blush-100 to-rose-200 rounded-2xl overflow-hidden aspect-[4/5] flex items-center justify-center">
-              {/* Replace the div below with:
-                  <img src="/images/about.jpg" alt="About Criste Joy" className="w-full h-full object-cover" />
-              */}
-              <div className="text-center px-6">
-                <div className="font-display text-6xl italic text-rose-300 mb-3">CJC</div>
-                <p className="font-body text-xs text-rose-400">Add your personal photo here</p>
-              </div>
+            <div className="relative bg-gradient-to-br from-blush-100 to-rose-200 rounded-2xl overflow-hidden aspect-[4/5]">
+              <img
+                src={aboutPhoto}
+                alt="Criste Joy Calosor"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Floating badge */}

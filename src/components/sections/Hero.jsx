@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import FloralCorner from '../../assets/svgs/FloralCorner'
+import headshot from '../../assets/criste-headshot.jpg'
 
 export default function Hero() {
   return (
@@ -48,7 +49,7 @@ export default function Hero() {
                 2200,
                 'Digital Marketing Assistant',
                 2200,
-                'Informatics Student',
+                'University of Cebu Student',
                 2200,
               ]}
               wrapper="span"
@@ -88,7 +89,7 @@ export default function Hero() {
               0929-841-5211
             </a>
             <a
-              href="mailto:christyjoycalosor13@gmail.com"
+              href="mailto:cristejoycalosor13@gmail.com"
               className="flex items-center gap-2 bg-white/65 backdrop-blur-sm px-3 py-2 rounded-full
                          text-xs text-rose-600 border border-rose-200 hover:border-rose-400
                          hover:bg-white/80 transition-all duration-200"
@@ -96,7 +97,7 @@ export default function Hero() {
               <svg className="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
               </svg>
-              christyjoycalosor13@gmail.com
+              cristejoycalosor13@gmail.com
             </a>
           </div>
         </motion.div>
@@ -116,14 +117,12 @@ export default function Hero() {
             {/* Main ring */}
             <div className="w-64 h-64 md:w-72 md:h-72 rounded-full border-4 border-rose-300 p-2 bg-white shadow-gold">
               {/* Inner profile area */}
-              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blush-100 via-rose-100 to-pink-200 flex flex-col items-center justify-center">
-                {/* Placeholder — replace with <img src="your-photo.jpg" className="w-full h-full object-cover" alt="Criste Joy Calosor" /> */}
-                <span className="font-display text-5xl font-bold italic text-rose-400 select-none">
-                  CJC
-                </span>
-                <p className="font-body text-xs text-rose-300 mt-1 text-center px-4">
-                  Replace with your photo
-                </p>
+              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blush-100 via-rose-100 to-pink-200">
+                <img
+                  src={headshot}
+                  alt="Criste Joy Calosor"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

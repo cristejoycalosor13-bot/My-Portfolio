@@ -1,44 +1,61 @@
+import bestOfCebuImg   from '../assets/best-of-cebu.jpg'
+import dashboardImg    from '../assets/demos/dashboard.png'
+import wellnessImg     from '../assets/demos/wellness.png'
+import sampleIssueImg  from '../assets/demos/sample-issue.png'
+
+const BASE = import.meta.env.BASE_URL
+
 export const portfolioItems = [
   {
     id: 1,
-    src: 'https://placehold.co/800x600/fce4ec/be185d?text=📱+Social+Media+Campaign',
-    title: 'Social Media Campaign',
-    category: 'Social Media',
-    description: 'A Facebook & Instagram campaign for a local boutique that achieved 3× engagement growth in one month.',
+    src: bestOfCebuImg,
+    title: 'Best of Cebu — Editorial Guide',
+    category: 'Web · Editorial',
+    description:
+      'Co-creating Best of Cebu with my partner Brian — a curated, magazine-style guide to the Queen City of the South. Editorial layout, photography-first feature pages, and a hand-picked roster of restaurants, cafés, and venues that actually matter. Currently in development pending trademark approval.',
+    link: 'https://dev.bestofcebu.com',
   },
   {
     id: 2,
-    src: 'https://placehold.co/800x600/fef3c7/b45309?text=🎨+Brand+Identity+Post',
-    title: 'Brand Identity Post',
-    category: 'Graphic Design',
-    description: 'Custom-designed brand graphics using Canva — developed a cohesive visual identity for a local food business.',
+    src: dashboardImg,
+    title: 'Bloom Boutique — Monthly Dashboard',
+    category: 'Web Dashboard',
+    description:
+      'A one-page client performance dashboard for a local boutique — followers, reach, engagement, top posts, and a 14-day reach chart. Designed to be skimmable in under a minute by non-marketing stakeholders. Click to open the live demo.',
+    link: `${BASE}demos/dashboard.html`,
   },
   {
     id: 3,
-    src: 'https://placehold.co/800x600/f0fdf4/166534?text=📋+Event+Promotion+Flyer',
-    title: 'Event Promotion Flyer',
-    category: 'Content Creation',
-    description: 'A promotional flyer for a school cultural event, designed with Canva and distributed digitally.',
+    src: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=600&fit=crop&q=80',
+    title: 'Bloom Boutique — Spring Launch',
+    category: 'Social Media Campaign',
+    description:
+      'Two-week Instagram & Facebook rollout for a Cebu boutique launching its spring collection. Created a 14-post grid, 9 story takeovers, and a Reels teaser — page reach grew 312% and the campaign drove 180+ DM inquiries in the first month.',
   },
   {
     id: 4,
-    src: 'https://placehold.co/800x600/eff6ff/1e40af?text=📊+Monthly+Report+Visual',
-    title: 'Monthly Analytics Report',
-    category: 'Data Visualization',
-    description: 'A clean, visually appealing social media performance report summarizing key engagement metrics.',
+    src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&q=80',
+    title: 'Café Luna — Brand Identity Kit',
+    category: 'Graphic Design',
+    description:
+      'A full Canva-based brand kit for a small Cebu café: logo lockups, IG story templates, menu cards, and a 12-post launch grid. Built around a warm pastel palette (blush, cream, terracotta) so every touchpoint felt like the same room.',
   },
   {
     id: 5,
-    src: 'https://placehold.co/800x600/fdf2f6/9f1239?text=🌸+Community+Post+Series',
-    title: 'Community Post Series',
-    category: 'Social Media',
-    description: 'A 5-part educational post series for a wellness page — consistent branding across all posts.',
+    src: wellnessImg,
+    title: 'A Little Bloom — Wellness Micro-site',
+    category: 'Web · Wellness',
+    description:
+      'A tiny, calming web companion that surfaces one wellness tip at a time — mind, body, movement, sleep. Soft palette, minimal interface, no signup. Click to flip through the tips yourself.',
+    link: `${BASE}demos/wellness.html`,
   },
   {
     id: 6,
-    src: 'https://placehold.co/800x600/faf5ff/7e22ce?text=📰+Newsletter+Cover',
-    title: 'Newsletter Cover Design',
-    category: 'Graphic Design',
-    description: "Cover design for the school's digital newsletter — blending editorial elegance with school spirit.",
+    src: sampleIssueImg,
+    title: 'The Bloom Letter — Sample Issue',
+    category: 'Web · Editorial',
+    description:
+      'The inaugural sample issue of The Bloom Letter, a student-press newsletter for the University of Cebu. Magazine-style masthead, lead feature, three secondary articles, a pull quote, and an editor\'s note — built to feel like a print issue you happen to be reading on screen.',
+    link: `${BASE}demos/sample-issue.html`,
   },
 ]

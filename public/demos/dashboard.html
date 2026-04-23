@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Boutique — March Performance Report · Criste Joy Calosor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/demo.css" />
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .header h1 {
+      font-size: 38px;
+      margin: 6px 0 4px;
+      color: var(--rose-800, #9f1239);
+    }
+    .header .sub { color: var(--rose-500); font-size: 14px; }
+    .badge {
+      background: var(--rose-100);
+      color: var(--rose-700);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 720px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat {
+      background: white;
+      border: 1px solid var(--rose-100);
+      border-radius: 16px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 24px rgba(244, 63, 94, 0.06);
+    }
+    .stat .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose-400);
+      margin-bottom: 8px;
+    }
+    .stat .value {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--rose-700);
+      line-height: 1.05;
+    }
+    .stat .delta {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #15803d;
+    }
+    .stat .delta.down { color: #b91c1c; }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px) { .panels { grid-template-columns: 1fr; } }
+    .panel {
+      background: white;
+      border: 1px solid var(--rose-100);
+      border-radius: 16px;
+      padding: 20px 22px;
+      box-shadow: 0 4px 24px rgba(244, 63, 94, 0.06);
+    }
+    .panel h3 {
+      margin: 0 0 4px;
+      font-size: 22px;
+      color: var(--rose-700);
+    }
+    .panel .h-sub { color: var(--rose-400); font-size: 12px; margin-bottom: 18px; }
+
+    .chart {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      align-items: end;
+      gap: 6px;
+      height: 180px;
+      padding-top: 8px;
+      border-bottom: 1px dashed var(--rose-200);
+    }
+    .bar {
+      background: linear-gradient(180deg, var(--rose-300), var(--rose-500));
+      border-radius: 6px 6px 0 0;
+      position: relative;
+    }
+    .bar.peak { background: linear-gradient(180deg, var(--amber-200), var(--amber-500)); }
+    .chart-x {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      gap: 6px;
+      margin-top: 8px;
+      font-size: 10px;
+      color: var(--rose-400);
+      text-align: center;
+    }
+
+    .top-posts { display: flex; flex-direction: column; gap: 12px; }
+    .post {
+      display: flex;
+      gap: 12px;
+      padding: 10px;
+      border-radius: 12px;
+      background: var(--blush-50);
+    }
+    .post .thumb {
+      width: 56px; height: 56px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--rose-200), var(--amber-200));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+    .post .meta { flex: 1; min-width: 0; }
+    .post .meta .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rose-700);
+      margin: 2px 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .post .meta .stats {
+      font-size: 11px;
+      color: var(--rose-400);
+      display: flex;
+      gap: 12px;
+    }
+
+    .demo-tag {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--rose-200);
+      color: var(--rose-500);
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <a href="../../" class="back-link">← Back to portfolio</a>
+
+    <div class="header">
+      <div>
+        <p class="eyebrow">✦ Performance Report ✦</p>
+        <h1>Bloom Boutique</h1>
+        <p class="sub">March 2026 · Instagram &amp; Facebook</p>
+      </div>
+      <span class="badge">CLIENT REPORT</span>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="label">Followers</div>
+        <div class="value">+312</div>
+        <div class="delta">▲ 14.2% vs Feb</div>
+      </div>
+      <div class="stat">
+        <div class="label">Total Reach</div>
+        <div class="value">45.2K</div>
+        <div class="delta">▲ 38.0% vs Feb</div>
+      </div>
+      <div class="stat">
+        <div class="label">Engagement</div>
+        <div class="value">4.8%</div>
+        <div class="delta">▲ 0.9 pts</div>
+      </div>
+      <div class="stat">
+        <div class="label">DM Inquiries</div>
+        <div class="value">186</div>
+        <div class="delta">▲ 64 vs Feb</div>
+      </div>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Daily Reach — Last 14 Days</h3>
+        <p class="h-sub">Reach peaked on Tuesday during the spring collection drop.</p>
+        <div class="chart" id="chart"></div>
+        <div class="chart-x" id="chart-x"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Top Performing Posts</h3>
+        <p class="h-sub">By saves and shares this period.</p>
+        <div class="top-posts">
+          <div class="post">
+            <div class="thumb">🌸</div>
+            <div class="meta">
+              <div class="title">Spring Collection Drop — Reels</div>
+              <div class="stats"><span>22.4K reach</span><span>1.1K saves</span></div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="thumb">👗</div>
+            <div class="meta">
+              <div class="title">"Pick Your Pastel" — Carousel</div>
+              <div class="stats"><span>14.8K reach</span><span>682 saves</span></div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="thumb">💌</div>
+            <div class="meta">
+              <div class="title">Customer Story — Single Post</div>
+              <div class="stats"><span>9.6K reach</span><span>410 saves</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span class="demo-tag">Sample dashboard · Portfolio demo</span>
+
+  <script>
+    const data = [12, 18, 15, 22, 19, 24, 31, 28, 26, 35, 41, 38, 33, 29];
+    const max = Math.max(...data);
+    const peakIdx = data.indexOf(max);
+    const labels = ['Mar 6','7','8','9','10','11','12','13','14','15','16','17','18','19'];
+
+    const chart = document.getElementById('chart');
+    data.forEach((v, i) => {
+      const bar = document.createElement('div');
+      bar.className = 'bar' + (i === peakIdx ? ' peak' : '');
+      bar.style.height = Math.round((v / max) * 100) + '%';
+      bar.title = `${labels[i]} — ${v}K reach`;
+      chart.appendChild(bar);
+    });
+
+    const xs = document.getElementById('chart-x');
+    labels.forEach(l => {
+      const s = document.createElement('span');
+      s.textContent = l;
+      xs.appendChild(s);
+    });
+  </script>
+</body>
+</html>
