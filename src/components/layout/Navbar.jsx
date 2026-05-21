@@ -5,8 +5,7 @@ import RoseBud from '../../assets/svgs/RoseBud'
 const navLinks = [
   { href: '#home',       label: 'Home' },
   { href: '#about',      label: 'About' },
-  { href: '#skills',     label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
+  { href: '#experience', label: 'Work & Skills' },
   { href: '#education',  label: 'Education' },
   { href: '#contact',    label: 'Contact' },
 ]
