@@ -62,9 +62,11 @@ export default function EducationCard({ school, level, period, location, descrip
       </p>
 
       {onClick && (
-        <p className="font-body text-rose-400 text-xs font-semibold mt-3 flex items-center gap-1">
-          📜 View Certificates →
-        </p>
+        <div className="mt-4">
+          <span className="inline-flex items-center gap-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold font-body px-4 py-2 rounded-full shadow-sm transition-colors duration-200">
+            📜 View Certificates →
+          </span>
+        </div>
       )}
     </motion.div>
   )
