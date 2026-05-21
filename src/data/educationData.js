@@ -9,10 +9,11 @@ export const education = [
   },
   {
     id: 1,
-    school: 'Informatics',
+    school: 'Informatics College Cebu – Consolacion',
     level: 'Senior High School',
-    period: '2022 – 2023',
-    location: 'Cebu, Philippines',
-    description: 'ICT / Technology Track · President of InfoGazette — Content Creator & Online Magazine Club',
+    period: '2020 – 2022',
+    location: 'Consolacion, Cebu',
+    description: 'HUMSS · With High Honors (GWA 95) · President of InfoGazette — Content Creator & Online Magazine Club',
+    hasCerts: true,
   },
 ]

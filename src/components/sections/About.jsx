@@ -8,6 +8,8 @@ const seekingRoles = [
   'Social Media Manager',
   'Virtual Assistant',
   'Content Creator',
+  'Web Developer/Designer',
+  'Recruiter',
 ]
 
 const traits = ['Fast Learner', 'Visual Thinker', 'Detail-Oriented', 'Curious & Adaptable']
@@ -36,7 +38,7 @@ export default function About() {
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-glass px-4 py-3 border border-rose-100 max-w-[180px]">
               <p className="font-display italic text-rose-600 text-sm font-semibold">✦ Open to Work</p>
-              <p className="font-body text-rose-400 text-xs leading-relaxed mt-0.5">Graphic Designer · Content Manager · Virtual Assistant · & more!</p>
+              <p className="font-body text-rose-400 text-xs leading-relaxed mt-0.5">Graphic Designer · Web Dev · VA · Recruiter · & more!</p>
             </div>
           </div>
         </ScrollReveal>

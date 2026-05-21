@@ -13,11 +13,12 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-export default function EducationCard({ school, level, period, location, description }) {
+export default function EducationCard({ school, level, period, location, description, onClick }) {
   return (
     <motion.div
       variants={cardVariants}
-      className="glass-card p-6 relative overflow-hidden hover:shadow-glass-md transition-shadow duration-300 group"
+      className={`glass-card p-6 relative overflow-hidden transition-shadow duration-300 group ${onClick ? 'cursor-pointer hover:shadow-gold' : 'hover:shadow-glass-md'}`}
+      onClick={onClick}
     >
       {/* Decorative corner */}
       <div className="absolute -top-4 -right-4 opacity-20 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none">
@@ -59,6 +60,12 @@ export default function EducationCard({ school, level, period, location, descrip
       <p className="font-body text-rose-600 text-sm leading-relaxed">
         {description}
       </p>
+
+      {onClick && (
+        <p className="font-body text-rose-400 text-xs font-semibold mt-3 flex items-center gap-1">
+          📜 View Certificates →
+        </p>
+      )}
     </motion.div>
   )
 }

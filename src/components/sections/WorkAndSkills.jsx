@@ -129,17 +129,17 @@ function VideoModal({ videos, siteLink, onClose }) {
 
 /* ── COE Certificate Modal ───────────────────────────────────── */
 function COECertificate({ onClose }) {
+  const coeSrc = `${import.meta.env.BASE_URL}certificates/vcustomer-coe.jpg`
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
       <motion.div
-        className="bg-white w-full max-w-lg my-4 shadow-2xl rounded-2xl overflow-hidden"
-        style={{ fontFamily: 'Georgia, serif' }}
+        className="relative w-full max-w-2xl my-4"
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.9, y: 20 }}
@@ -148,81 +148,15 @@ function COECertificate({ onClose }) {
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-10 w-8 h-8 bg-slate-100 hover:bg-slate-200 rounded-full flex items-center justify-center text-slate-500 text-sm transition-colors"
-          style={{ fontFamily: 'system-ui' }}
+          className="absolute -top-3 -right-3 z-10 w-9 h-9 bg-white hover:bg-rose-50 rounded-full flex items-center justify-center text-slate-600 text-sm shadow-lg transition-colors"
         >
           ✕
         </button>
-
-        <div className="h-1.5 bg-gradient-to-r from-red-600 via-red-500 to-red-700" />
-
-        <div className="px-8 pt-6 pb-4 flex items-start justify-between gap-4 border-b border-slate-100">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full border-2 border-slate-700 flex items-center justify-center flex-shrink-0">
-              <svg viewBox="0 0 24 24" className="w-7 h-7 text-slate-700" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 3c-2.5 3-4 5.5-4 9s1.5 6 4 9M12 3c2.5 3 4 5.5 4 9s-1.5 6-4 9M3 12h18" strokeLinecap="round" />
-              </svg>
-            </div>
-            <div>
-              <p className="font-black text-slate-800 tracking-[0.18em] text-base leading-none">VCUSTOMER</p>
-              <p className="text-slate-600 text-[10px] tracking-[0.08em] uppercase font-bold mt-0.5">Human Resources Department</p>
-            </div>
-          </div>
-          <div className="text-right text-[9px] text-slate-500 leading-relaxed max-w-[180px]">
-            <p className="font-bold text-slate-600 text-[10px]">vCustomer Cebu Site:</p>
-            <p>Filininvest Tower 2</p>
-            <p>14<sup>th</sup> Floor FCC tower 2, Salinas Dr., cor W. Geonzon St</p>
-            <p>IT Park, Cebu City 6000</p>
-            <p className="font-bold text-slate-600 text-[10px] mt-1">Ebloc 3</p>
-            <p>6<sup>th</sup> Floor Ebloc 3 || IT Park Lahug || Cebu City, Phils. 6000</p>
-            <p className="text-red-600 mt-1">CEBU: Tel +032 260 970 local 510907</p>
-          </div>
-        </div>
-
-        <div className="px-8 pt-6 pb-2 text-center">
-          <h2 className="text-slate-800 tracking-[0.5em] text-2xl font-bold uppercase">
-            C E R T I F I C A T I O N
-          </h2>
-          <div className="w-24 h-0.5 bg-slate-300 mx-auto mt-3" />
-        </div>
-
-        <div className="px-8 py-5 space-y-4 text-slate-700 text-sm leading-relaxed">
-          <p>
-            This is to certify that{' '}
-            <strong className="text-slate-900">Criste Joy Calosor</strong> was an employee of{' '}
-            <strong className="text-slate-900">vCUSTOMER PHILIPPINES (CEBU) INC. (a Tech Mahindra Company)</strong>{' '}
-            from <strong className="text-slate-900">9/13/2024</strong> to{' '}
-            <strong className="text-slate-900">12/4/2024</strong>. She held the position{' '}
-            <strong className="text-slate-900">Associate - Customer Support</strong>.
-          </p>
-          <p>
-            This certification is issued upon the request of{' '}
-            <strong className="text-slate-900">Criste Joy Calosor</strong> for employment purposes.
-            vCustomer Cebu shall not be held liable if this certification is used other than the
-            purpose indicated.
-          </p>
-          <p>
-            Issued this <strong className="text-slate-900">23rd day of December 2024</strong>,
-            Cebu City, Philippines.
-          </p>
-        </div>
-
-        <div className="px-8 pb-5">
-          <div className="w-40 pt-6">
-            <div className="border-b border-slate-400 mb-1" />
-            <p className="font-bold text-slate-800 text-sm">Marvin Chris Zoilo</p>
-            <p className="text-slate-600 text-xs">Group Manager, Human Resources</p>
-          </div>
-        </div>
-
-        <div className="px-8 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <p className="text-slate-400 text-[9px]">HR Document</p>
-          <p className="text-[9px] text-slate-500 italic">
-            For Employee Verification:{' '}
-            <span className="text-blue-500">EmployeeVerificationRequest@TechMahindra.com</span>
-          </p>
-        </div>
+        <img
+          src={coeSrc}
+          alt="Certificate of Employment – vCustomer Philippines"
+          className="w-full rounded-2xl shadow-2xl"
+        />
       </motion.div>
     </motion.div>
   )
