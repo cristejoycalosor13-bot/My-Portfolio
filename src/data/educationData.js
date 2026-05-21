@@ -1,11 +1,11 @@
 export const education = [
   {
     id: 0,
-    school: 'Currently 2nd Year',
+    school: 'University of Cebu – Banilad',
     level: 'College',
     period: '2023 – Present',
-    location: 'Cebu, Philippines',
-    description: 'BS Business Administration · Major in Financial Management',
+    location: 'Banilad, Cebu City',
+    description: 'BS Business Administration · Major in Financial Management · Currently 2nd Year',
   },
   {
     id: 1,

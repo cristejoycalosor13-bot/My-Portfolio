@@ -78,8 +78,8 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-3 mb-6">
-            <a href="#portfolio" className="btn-primary">
-              ✦ View My Work
+            <a href="#experience" className="btn-primary">
+              🌸 View My Work
             </a>
             <a href="#contact" className="btn-outline">
               Get in Touch
