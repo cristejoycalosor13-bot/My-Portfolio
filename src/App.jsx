@@ -12,20 +12,21 @@ import Contact       from './components/sections/Contact'
 export default function App() {
   return (
     <div className="relative">
-      {/* Petals float behind everything (z-0) */}
       <FloatingPetals />
-
-      {/* Navbar on top (z-50 via class) */}
       <Navbar />
 
-      {/* Main content (z-10 to sit above petals) */}
       <main className="relative z-10">
         <Hero />
         <About />
+
+        {/* Experience + Portfolio side by side on desktop */}
+        <div className="grid lg:grid-cols-2 items-start divide-y lg:divide-y-0 lg:divide-x divide-rose-100">
+          <Experience />
+          <Portfolio />
+        </div>
+
         <Skills />
-        <Experience />
         <Education />
-        <Portfolio />
         <Contact />
       </main>
 

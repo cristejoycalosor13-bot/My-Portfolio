@@ -33,7 +33,7 @@ export default function Education() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto"
         >
           {education.map((edu) => (
             <EducationCard

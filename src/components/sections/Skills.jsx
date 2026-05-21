@@ -4,91 +4,117 @@ import ScrollReveal from '../ui/ScrollReveal'
 import FloralDivider from '../../assets/svgs/FloralDivider'
 import { skillGroups } from '../../data/skillsData'
 
-function SkillAccordion({ icon, title, description, tags, defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen)
-
+function SkillModal({ skill, onClose }) {
   return (
-    <div className="bg-gradient-to-br from-blush-50 to-rose-50 rounded-2xl overflow-hidden border border-rose-100 hover:shadow-glass transition-shadow duration-300">
-      <button
-        className="w-full px-5 py-4 flex items-center justify-between gap-3 cursor-pointer text-left"
-        onClick={() => setOpen(!open)}
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl"
+        initial={{ scale: 0.85, y: 24 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.85, y: 24 }}
+        transition={{ type: 'spring', stiffness: 320, damping: 26 }}
+        onClick={e => e.stopPropagation()}
       >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm border border-rose-100 flex-shrink-0">
-            {icon}
+        {/* Image header */}
+        <div className="relative h-36 overflow-hidden">
+          <img src={skill.image} alt={skill.title} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-rose-950/80 via-rose-800/30 to-transparent" />
+          <div className="absolute bottom-3 left-4 flex items-center gap-2.5">
+            <span className="text-3xl">{skill.icon}</span>
+            <h3 className="font-display text-white text-xl italic font-bold">{skill.title}</h3>
           </div>
-          <h3 className="font-display font-bold text-rose-800 text-base">{title}</h3>
-        </div>
-        <motion.span
-          animate={{ rotate: open ? 180 : 0 }}
-          transition={{ duration: 0.25 }}
-          className="text-rose-400 text-sm font-bold flex-shrink-0"
-        >
-          ▼
-        </motion.span>
-      </button>
-
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="body"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="overflow-hidden"
+          <button
+            onClick={onClose}
+            className="absolute top-3 right-3 w-7 h-7 bg-white/15 hover:bg-white/30 rounded-full flex items-center justify-center text-white text-sm transition-colors backdrop-blur-sm"
           >
-            <div className="px-5 pb-4">
-              <p className="font-body text-rose-500 text-sm mb-3 italic leading-relaxed">{description}</p>
-              <div className="flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-white text-rose-600 border border-rose-200 px-3 py-1 rounded-full text-xs font-medium font-body hover:bg-blush-100 transition-colors duration-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            ✕
+          </button>
+        </div>
+
+        {/* Body */}
+        <div className="p-5">
+          <p className="font-body text-rose-400 italic text-sm mb-4">{skill.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {skill.tags.map(tag => (
+              <span
+                key={tag}
+                className="bg-blush-50 text-rose-600 border border-rose-200 px-3 py-1.5 rounded-full text-xs font-medium font-body"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
 export default function Skills() {
+  const [active, setActive] = useState(null)
+
   return (
-    <section id="skills" className="bg-gold-light relative">
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
+    <section id="skills" className="bg-hero-gradient relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
 
       <div className="section-wrapper">
-        <ScrollReveal className="text-center mb-12">
+        <ScrollReveal className="text-center mb-10">
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
             ✦ &nbsp;What I Bring&nbsp; ✦
           </p>
           <h2 className="section-title mb-3">Skills &amp; Expertise</h2>
           <FloralDivider className="mx-auto mb-3" />
-          <p className="font-body text-rose-500 text-sm italic max-w-md mx-auto">
-            Every tool I wield is a brushstroke in the masterpiece of communication.
-          </p>
+          <p className="font-body text-rose-400 text-sm italic">Tap any skill to explore.</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {skillGroups.map((group, i) => (
-            <ScrollReveal key={group.id} delay={i * 0.07}>
-              <SkillAccordion
-                icon={group.icon}
-                title={group.title}
-                description={group.description}
-                tags={group.tags}
-                defaultOpen={i === 0}
-              />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {skillGroups.map((skill, i) => (
+            <ScrollReveal key={skill.id} delay={i * 0.07}>
+              <motion.div
+                className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-glass hover:shadow-glass-md transition-shadow"
+                style={{ aspectRatio: '4/3' }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.22 }}
+                onClick={() => setActive(skill)}
+              >
+                {/* Background image */}
+                <img
+                  src={skill.image}
+                  alt={skill.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                {/* Dark-to-transparent overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-rose-950/85 via-rose-900/30 to-transparent" />
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <div className="text-2xl mb-1">{skill.icon}</div>
+                  <h3 className="font-display text-white text-sm font-bold leading-tight">{skill.title}</h3>
+                </div>
+
+                {/* Hover hint */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-white/30 font-medium">
+                    ✦ Tap to explore
+                  </span>
+                </div>
+              </motion.div>
             </ScrollReveal>
           ))}
         </div>
       </div>
+
+      {/* Popup */}
+      <AnimatePresence>
+        {active && <SkillModal skill={active} onClose={() => setActive(null)} />}
+      </AnimatePresence>
     </section>
   )
 }

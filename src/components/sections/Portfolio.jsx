@@ -21,8 +21,8 @@ export default function Portfolio() {
   }
 
   return (
-    <section id="portfolio" className="bg-hero-gradient relative">
-      <div className="section-wrapper">
+    <section id="portfolio" className="bg-hero-gradient relative py-16 px-6">
+      <div className="max-w-2xl mx-auto">
         {/* Header */}
         <ScrollReveal className="text-center mb-12">
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
@@ -36,7 +36,7 @@ export default function Portfolio() {
         </ScrollReveal>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 gap-3">
           {portfolioItems.map((item, i) => (
             <ScrollReveal key={item.id} delay={i * 0.07}>
               <motion.div
