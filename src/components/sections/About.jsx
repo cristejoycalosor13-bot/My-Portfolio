@@ -34,9 +34,9 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-glass px-4 py-3 border border-rose-100">
-              <p className="font-display italic text-rose-600 text-sm font-semibold">Open to Work</p>
-              <p className="font-body text-rose-400 text-xs">Full-time · Freelance · Remote</p>
+            <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-glass px-4 py-3 border border-rose-100 max-w-[180px]">
+              <p className="font-display italic text-rose-600 text-sm font-semibold">✦ Open to Work</p>
+              <p className="font-body text-rose-400 text-xs leading-relaxed mt-0.5">Graphic Designer · Content Manager · Virtual Assistant · & more!</p>
             </div>
           </div>
         </ScrollReveal>

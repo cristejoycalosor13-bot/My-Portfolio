@@ -73,7 +73,7 @@ export default function Hero() {
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
             A <strong className="font-semibold text-rose-600">graphic designer who speaks fluent AI</strong> — blending human intuition with cutting-edge tools to craft visuals that don't just look beautiful, they <em>feel</em> unforgettable. Currently pursuing a degree in{' '}
-            <strong className="font-semibold text-rose-600">IT / Multimedia Arts</strong>, and already leaving a mark on the creative industry.
+            <strong className="font-semibold text-rose-600">Financial Management</strong>, and already leaving a mark on the creative industry.
           </p>
 
           {/* CTAs */}

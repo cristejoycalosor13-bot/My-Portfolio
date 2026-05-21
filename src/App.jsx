@@ -6,7 +6,6 @@ import About         from './components/sections/About'
 import Skills        from './components/sections/Skills'
 import Experience    from './components/sections/Experience'
 import Education     from './components/sections/Education'
-import Portfolio     from './components/sections/Portfolio'
 import Contact       from './components/sections/Contact'
 
 export default function App() {
@@ -19,11 +18,7 @@ export default function App() {
         <Hero />
         <About />
 
-        {/* Experience + Portfolio side by side on desktop */}
-        <div className="grid lg:grid-cols-2 items-start divide-y lg:divide-y-0 lg:divide-x divide-rose-100">
-          <Experience />
-          <Portfolio />
-        </div>
+        <Experience />
 
         <Skills />
         <Education />

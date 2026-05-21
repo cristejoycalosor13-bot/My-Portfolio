@@ -267,7 +267,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="bg-white relative py-16 px-6">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal className="text-center mb-10">
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
             ✦ &nbsp;My Journey&nbsp; ✦
@@ -276,7 +276,7 @@ export default function Experience() {
           <FloralDivider className="mx-auto" />
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {experiences.map((exp, i) => (
             <ScrollReveal key={exp.id} delay={i * 0.08}>
               <motion.div
