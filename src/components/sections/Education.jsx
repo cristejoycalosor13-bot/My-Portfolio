@@ -115,13 +115,7 @@ function InformaticsCertModal({ onClose }) {
 
           {/* Certificate grid */}
           <div className="p-5 max-h-[55vh] overflow-y-auto">
-            {tab === 'originals' ? (
-              <div className="text-center py-10">
-                <p className="text-4xl mb-3">📋</p>
-                <p className="font-display italic text-rose-500 text-lg">Coming soon</p>
-                <p className="font-body text-rose-400 text-sm mt-1">Scanned originals will be added shortly.</p>
-              </div>
-            ) : (
+            {false ? null : (
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {informaticsCerts.map((cert, i) => (
                   <motion.button
