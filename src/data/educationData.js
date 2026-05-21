@@ -1,11 +1,11 @@
 export const education = [
   {
     id: 0,
-    school: 'University of Cebu',
+    school: 'Currently Enrolled — 2nd Year',
     level: 'College',
     period: '2023 – Present',
     location: 'Cebu, Philippines',
-    description: 'Currently in 2nd year, pursuing a degree with a focus on digital and information technology.',
+    description: 'IT / Multimedia Arts Program — pursuing excellence in technology and creative design.',
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const education = [
     level: 'Senior High School',
     period: '2022 – 2023',
     location: 'Cebu, Philippines',
-    description: 'ICT strand with a focus on digital media, information systems, and computer applications.',
+    description: 'ICT / Technology Track — where my journey into digital design officially began.',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const education = [
     level: 'Junior High School',
     period: '2021 – 2022',
     location: 'Lilo-an, Cebu',
-    description: 'General academic track with active involvement in the Student Council as Secretary.',
+    description: 'Cultivated discipline, creativity, and a love for learning.',
   },
   {
     id: 3,
@@ -29,6 +29,6 @@ export const education = [
     level: 'Elementary',
     period: '2014 – 2015',
     location: 'Villaba, Leyte',
-    description: 'Foundational education in Cabungahan, Villaba, Leyte — where the journey began.',
+    description: 'Where it all began — the roots of a future creative.',
   },
 ]

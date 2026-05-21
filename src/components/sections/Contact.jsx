@@ -109,7 +109,7 @@ export default function Contact() {
             {/* Availability note */}
             <GlassCard className="p-4 border-l-4 border-rose-400">
               <p className="font-display italic text-rose-600 text-sm">
-                Currently open to freelance projects and internship opportunities!
+                Currently open to design projects, freelance work, and creative collaborations!
               </p>
             </GlassCard>
           </ScrollReveal>

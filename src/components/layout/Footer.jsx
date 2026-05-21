@@ -12,7 +12,7 @@ export default function Footer() {
           <RoseBud size={16} className="opacity-80" />
         </div>
         <p className="font-body text-rose-300 text-sm mb-5 italic">
-          Social Media Manager &amp; Digital Marketing Assistant
+          Graphic Designer ✦ Video Editor ✦ AI Creative
         </p>
 
         <div className="flex justify-center gap-5 mb-6">

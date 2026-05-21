@@ -1,32 +1,49 @@
-export const progressSkills = [
-  { name: 'Social Media Management', percentage: 88 },
-  { name: 'Content Creation (Canva)', percentage: 85 },
-  { name: 'Microsoft Office Suite', percentage: 80 },
-  { name: 'Google Workspace', percentage: 82 },
-  { name: 'Data Entry & Encoding', percentage: 90 },
-  { name: 'Basic HTML / CSS', percentage: 60 },
-  { name: 'Photo Editing', percentage: 72 },
-  { name: 'Customer Service', percentage: 78 },
+export const skillGroups = [
+  {
+    id: 'graphic-design',
+    icon: '🎨',
+    title: 'Graphic Design',
+    description: 'Transforming concepts into stunning visuals with precision and artistry.',
+    tags: ['Adobe Photoshop', 'Adobe Illustrator', 'Canva Pro', 'Brand Identity', 'Layout Design', 'Typography'],
+  },
+  {
+    id: 'video-editing',
+    icon: '🎬',
+    title: 'Video Editing',
+    description: 'Breathing life into footage — rhythm, color, and story woven together.',
+    tags: ['Adobe Premiere Pro', 'CapCut', 'Color Grading', 'Motion Graphics', 'Social Media Videos'],
+  },
+  {
+    id: 'ai-design',
+    icon: '🤖',
+    title: 'AI-Powered Design',
+    description: 'Harnessing AI as a creative co-pilot for next-level output.',
+    tags: ['Midjourney', 'Adobe Firefly', 'ChatGPT for Copy', 'AI Image Enhancement', 'Prompt Engineering'],
+  },
+  {
+    id: 'social-media',
+    icon: '📱',
+    title: 'Social Media Content',
+    description: 'Crafting scroll-stopping content for the feeds that matter most.',
+    tags: ['Instagram Reels', 'Facebook Graphics', 'Story Templates', 'Content Strategy', 'Thumbnails'],
+  },
+  {
+    id: 'web-ui',
+    icon: '🖥️',
+    title: 'Web & UI Design',
+    description: 'Creating digital experiences that are as beautiful as they are functional.',
+    tags: ['Google Sites', 'Figma Basics', 'UI Mockups', 'HTML/CSS Basics', 'Wireframing'],
+  },
+  {
+    id: 'soft-skills',
+    icon: '🌸',
+    title: 'Soft Skills',
+    description: 'The human traits that make the creative magic happen.',
+    tags: ['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability'],
+  },
 ]
 
-export const toolTags = [
-  { label: 'Canva', category: 'tools' },
-  { label: 'Meta Business Suite', category: 'tools' },
-  { label: 'Google Drive', category: 'tools' },
-  { label: 'Microsoft Word', category: 'tools' },
-  { label: 'Microsoft Excel', category: 'tools' },
-  { label: 'Caption Writing', category: 'skills' },
-  { label: 'Content Calendar', category: 'skills' },
-  { label: 'Community Management', category: 'skills' },
-  { label: 'Analytics Reading', category: 'skills' },
-  { label: 'Attention to Detail', category: 'personal' },
-  { label: 'Fast Learner', category: 'personal' },
-  { label: 'Adaptable', category: 'personal' },
-  { label: 'Team Player', category: 'personal' },
-]
-
-export const categoryColors = {
-  tools: 'bg-rose-100 text-rose-700 border-rose-200',
-  skills: 'bg-amber-100 text-amber-700 border-amber-200',
-  personal: 'bg-pink-100 text-pink-700 border-pink-200',
-}
+// Legacy exports kept for any components that still reference them
+export const progressSkills = []
+export const toolTags = []
+export const categoryColors = {}

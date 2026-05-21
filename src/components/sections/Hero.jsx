@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { TypeAnimation } from 'react-type-animation'
 import FloralCorner from '../../assets/svgs/FloralCorner'
 import headshot from '../../assets/criste-headshot.jpg'
 
@@ -20,6 +19,26 @@ export default function Hero() {
         <FloralCorner size={160} />
       </div>
 
+      {/* Floating background orbs */}
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{
+          top: '-100px', right: '-100px',
+          width: '500px', height: '500px',
+          background: 'radial-gradient(circle, rgba(212,184,224,0.3) 0%, transparent 70%)',
+          animation: 'float 8s ease-in-out infinite',
+        }}
+      />
+      <div
+        className="absolute pointer-events-none rounded-full"
+        style={{
+          bottom: '-80px', left: '-80px',
+          width: '380px', height: '380px',
+          background: 'radial-gradient(circle, rgba(242,184,198,0.25) 0%, transparent 70%)',
+          animation: 'float 10s ease-in-out infinite reverse',
+        }}
+      />
+
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 gap-12 items-center w-full">
         {/* — Text column — */}
         <motion.div
@@ -27,48 +46,40 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
+          {/* AI badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blush-200 to-rose-200 px-4 py-1.5 rounded-full text-sm font-semibold text-rose-800 mb-4 shadow-sm border border-rose-200">
+            ✦ AI-Powered Designer ✦
+          </div>
+
           {/* Eyebrow */}
-          <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-amber-500 mb-3">
-            ✦ &nbsp;Welcome to my world&nbsp; ✦
+          <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-rose-400 mb-3 flex items-center gap-2">
+            <span className="inline-block w-8 h-px bg-rose-400" />
+            Visual Artist &amp; Creative Mind
           </p>
 
           {/* Name */}
-          <h1 className="font-display text-5xl md:text-6xl font-bold italic leading-tight mb-4 text-rose-800">
+          <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight mb-2 text-rose-900">
             Criste Joy
             <br />
-            <span className="text-rose-500">Calosor</span>
+            <span className="text-rose-500 italic">Calosor</span>
           </h1>
 
-          {/* Typing animation */}
-          <div className="font-body text-xl text-amber-600 font-semibold mb-4 min-h-[2rem]">
-            <TypeAnimation
-              sequence={[
-                'Social Media Manager',
-                2200,
-                'Content Creator',
-                2200,
-                'Digital Marketing Assistant',
-                2200,
-                'University of Cebu Student',
-                2200,
-              ]}
-              wrapper="span"
-              speed={55}
-              repeat={Infinity}
-            />
-          </div>
-
           {/* Tagline */}
-          <p className="font-body text-rose-500 italic text-base md:text-lg mb-8 leading-relaxed max-w-md">
-            Where every digital story blooms into something beautiful — crafting
-            connections that linger long after the scroll, and leaving a trail of
-            wonder in every caption, post, and pixel.
+          <p className="font-display italic text-lg text-rose-400 mb-5 leading-relaxed">
+            "Where aesthetics meet algorithm —<br className="hidden md:block" />
+            I don't just design, I dream in pixels."
+          </p>
+
+          {/* Description */}
+          <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
+            A <strong className="font-semibold text-rose-600">graphic designer who speaks fluent AI</strong> — blending human intuition with cutting-edge tools to craft visuals that don't just look beautiful, they <em>feel</em> unforgettable. Currently pursuing a degree in{' '}
+            <strong className="font-semibold text-rose-600">IT / Multimedia Arts</strong>, and already leaving a mark on the creative industry.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          <div className="flex flex-wrap gap-3 mb-6">
             <a href="#portfolio" className="btn-primary">
-              View My Work
+              ✦ View My Work
             </a>
             <a href="#contact" className="btn-outline">
               Get in Touch
@@ -102,48 +113,70 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* — Image column — */}
+        {/* — Photo cards column — */}
         <motion.div
           initial={{ opacity: 0, scale: 0.88 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
           className="flex justify-center items-center relative"
+          style={{ height: '480px' }}
         >
-          {/* Floating avatar frame */}
-          <div className="relative animate-float-slow">
-            {/* Outer gold ring */}
-            <div className="absolute inset-0 rounded-full border-4 border-amber-200 opacity-60 scale-110 animate-pulse-soft" />
-
-            {/* Main ring */}
-            <div className="w-64 h-64 md:w-72 md:h-72 rounded-full border-4 border-rose-300 p-2 bg-white shadow-gold">
-              {/* Inner profile area */}
-              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blush-100 via-rose-100 to-pink-200">
-                <img
-                  src={headshot}
-                  alt="Criste Joy Calosor"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          {/* Left card */}
+          <div
+            className="absolute bg-gradient-to-br from-blush-200 to-rose-200 rounded-2xl border-4 border-white shadow-gold flex items-center justify-center overflow-hidden"
+            style={{ width: '160px', height: '210px', top: '80px', left: '5%', transform: 'rotate(4deg)', zIndex: 2 }}
+          >
+            <div className="text-center">
+              <div className="text-5xl">📸</div>
             </div>
-
-            {/* Accent bubbles */}
-            <div className="absolute -top-3 -right-3 w-14 h-14 rounded-full border-4 border-amber-200 opacity-55" />
-            <div className="absolute -bottom-2 -left-3 w-9 h-9 rounded-full border-3 border-rose-300 opacity-55" />
-            <div className="absolute top-1/2 -right-6 w-5 h-5 rounded-full bg-amber-200 opacity-45" />
+            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
+              ✦ Creative Soul
+            </div>
           </div>
 
-          {/* Scroll hint */}
-          <motion.div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-rose-300"
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          {/* Center card (main) — uses real headshot */}
+          <div
+            className="absolute rounded-2xl border-4 border-white shadow-gold overflow-hidden"
+            style={{ width: '200px', height: '265px', top: '20px', left: '50%', transform: 'translateX(-50%) rotate(-3deg)', zIndex: 3 }}
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </motion.div>
+            <img src={headshot} alt="Criste Joy Calosor" className="w-full h-full object-cover" />
+            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-600 shadow-sm whitespace-nowrap border border-rose-100">
+              Criste Joy
+            </div>
+          </div>
+
+          {/* Right card */}
+          <div
+            className="absolute bg-gradient-to-br from-blush-200 to-blush-100 rounded-2xl border-4 border-white shadow-glass flex items-center justify-center overflow-hidden"
+            style={{ width: '155px', height: '205px', top: '100px', right: '2%', transform: 'rotate(-5deg)', zIndex: 2 }}
+          >
+            <div className="text-center">
+              <div className="text-5xl">🎨</div>
+            </div>
+            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
+              ✦ Designer
+            </div>
+          </div>
+
+          {/* Experience badge */}
+          <div
+            className="absolute bg-gradient-to-br from-blush-200 to-amber-100 rounded-2xl px-4 py-3 shadow-gold text-center z-10 border border-rose-100"
+            style={{ bottom: '30px', left: '0' }}
+          >
+            <span className="font-display font-black text-3xl text-rose-900 block leading-none">2+</span>
+            <span className="font-body text-xs font-semibold uppercase tracking-wider text-rose-500 leading-tight">
+              Years of<br />Experience
+            </span>
+          </div>
         </motion.div>
       </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-28px); }
+        }
+      `}</style>
     </section>
   )
 }
