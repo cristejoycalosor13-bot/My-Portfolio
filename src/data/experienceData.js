@@ -11,8 +11,9 @@ export const experiences = [
     badge: '🚀 Startup',
     note: 'Trademark application in progress',
     link: 'https://dev.bestofcebu.com/',
-    linkType: 'external',
-    cta: 'Visit site →',
+    linkType: 'videos',
+    cta: 'Watch videos →',
+    videos: ['Re9dgluG50Q', 'hdbnF11oZHM', '6PzlJdJjjgc', 'ajOhaFpvTdk', 't4RCtIH3Pds'],
   },
   {
     id: 2,
