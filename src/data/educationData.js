@@ -5,7 +5,9 @@ export const education = [
     level: 'College',
     period: '2023 – Present',
     location: 'Banilad, Cebu City',
-    description: 'BS Business Administration · Major in Financial Management · Currently 2nd Year',
+    description: 'BS Business Administration · Major in Financial Management · Currently 2nd Year · Dean\'s Lister',
+    hasCerts: true,
+    certType: 'uc',
   },
   {
     id: 1,
@@ -15,5 +17,6 @@ export const education = [
     location: 'Consolacion, Cebu',
     description: 'HUMSS · With High Honors (GWA 95) · President of InfoGazette — Content Creator & Online Magazine Club',
     hasCerts: true,
+    certType: 'informatics',
   },
 ]

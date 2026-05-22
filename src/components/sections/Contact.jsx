@@ -56,9 +56,12 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    const subject = encodeURIComponent(form.subject || 'Message from Portfolio')
+    const body = encodeURIComponent(
+      `Hi Criste Joy!\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    )
+    window.open(`mailto:cristejoycalosor13@gmail.com?subject=${subject}&body=${body}`)
     setSubmitted(true)
-    // To enable real email delivery, sign up at https://formspree.io and replace the form action:
-    // <form action="https://formspree.io/f/YOUR_ID" method="POST">
   }
 
   return (
