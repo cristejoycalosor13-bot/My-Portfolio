@@ -24,7 +24,3 @@ export const skillGroups = [
     tags: ['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability'],
   },
 ]
-
-export const progressSkills = []
-export const toolTags = []
-export const categoryColors = {}
