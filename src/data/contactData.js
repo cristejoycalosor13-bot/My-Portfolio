@@ -1,0 +1,5 @@
+export const PHONE_DISPLAY = '0929-841-5211'
+export const PHONE_HREF = 'tel:09298415211'
+export const EMAIL = 'cristejoycalosor13@gmail.com'
+export const EMAIL_HREF = 'mailto:cristejoycalosor13@gmail.com'
+export const LOCATION = 'Cebu, Philippines'

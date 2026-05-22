@@ -4,6 +4,7 @@ import ScrollReveal from '../ui/ScrollReveal'
 import GlassCard from '../ui/GlassCard'
 import FloralDivider from '../../assets/svgs/FloralDivider'
 import FloralCorner from '../../assets/svgs/FloralCorner'
+import { PHONE_DISPLAY, PHONE_HREF, EMAIL, EMAIL_HREF, LOCATION } from '../../data/contactData'
 
 const contactInfo = [
   {
@@ -13,8 +14,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Phone',
-    value: '0929-841-5211',
-    href: 'tel:09298415211',
+    value: PHONE_DISPLAY,
+    href: PHONE_HREF,
   },
   {
     icon: (
@@ -23,8 +24,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'cristejoycalosor13@gmail.com',
-    href: 'mailto:cristejoycalosor13@gmail.com',
+    value: EMAIL,
+    href: EMAIL_HREF,
   },
   {
     icon: (
@@ -35,7 +36,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Location',
-    value: 'Cebu, Philippines',
+    value: LOCATION,
     href: null,
   },
 ]
