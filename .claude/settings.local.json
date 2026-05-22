@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm --version)",
       "Bash(npx --version)",
-      "Bash(npm info *)"
+      "Bash(npm info *)",
+      "Bash(git push *)"
     ]
   }
 }
