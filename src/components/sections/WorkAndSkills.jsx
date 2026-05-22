@@ -218,7 +218,7 @@ function SubLabel({ children }) {
     <div className="flex items-center gap-3 mb-4">
       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
       <span className="font-body text-xs font-semibold tracking-[0.22em] uppercase text-rose-400 whitespace-nowrap">
-        ✦ &nbsp;{children}&nbsp; ✦
+        🌸 &nbsp;{children}&nbsp; 🌸
       </span>
       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
     </div>
@@ -254,7 +254,7 @@ export default function WorkAndSkills() {
         {/* Section header */}
         <ScrollReveal className="text-center mb-10">
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
-            ✦ &nbsp;My Journey&nbsp; ✦
+            🌸 &nbsp;My Journey&nbsp; 🌸
           </p>
           <h2 className="section-title mb-3">Skills &amp; Experience</h2>
           <FloralDivider className="mx-auto mb-3" />
@@ -309,7 +309,7 @@ export default function WorkAndSkills() {
 
         {/* ── Skill cards ── */}
         <SubLabel>Skills &amp; Expertise</SubLabel>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skillGroups.map((skill, i) => (
             <ScrollReveal key={skill.id} delay={i * 0.07}>
               <motion.div
@@ -334,7 +334,7 @@ export default function WorkAndSkills() {
 
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-white/30 font-medium">
-                    ✦ Tap to explore
+                    🌸 Tap to explore
                   </span>
                 </div>
               </motion.div>

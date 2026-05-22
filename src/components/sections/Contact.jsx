@@ -57,9 +57,7 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault()
     const subject = encodeURIComponent(form.subject || 'Message from Portfolio')
-    const body = encodeURIComponent(
-      `Hi Criste Joy!\n\nName: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
-    )
+    const body = encodeURIComponent(form.message)
     window.open(`mailto:cristejoycalosor13@gmail.com?subject=${subject}&body=${body}`)
     setSubmitted(true)
   }
@@ -75,7 +73,7 @@ export default function Contact() {
         {/* Header */}
         <ScrollReveal className="text-center mb-12">
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
-            ✦ &nbsp;Reach out&nbsp; ✦
+            🌸 &nbsp;Reach out&nbsp; 🌸
           </p>
           <h2 className="section-title mb-3">Let's Connect</h2>
           <FloralDivider className="mx-auto mb-4" />

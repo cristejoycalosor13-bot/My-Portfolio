@@ -37,7 +37,7 @@ export default function About() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-glass px-4 py-3 border border-rose-100 max-w-[180px]">
-              <p className="font-display italic text-rose-600 text-sm font-semibold">✦ Open to Work</p>
+              <p className="font-display italic text-rose-600 text-sm font-semibold">🌸 Open to Work</p>
               <p className="font-body text-rose-400 text-xs leading-relaxed mt-0.5">Graphic Designer · Web Dev · VA · Recruiter · & more!</p>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function About() {
         {/* Bio */}
         <ScrollReveal direction="right" delay={0.12}>
           <p className="font-body text-xs font-semibold tracking-[0.25em] uppercase text-amber-500 mb-2">
-            ✦ &nbsp;Nice to meet you&nbsp; ✦
+            🌸 &nbsp;Nice to meet you&nbsp; 🌸
           </p>
           <h2 className="section-title mb-3">Hi, I'm Criste Joy!</h2>
           <FloralDivider className="mb-5" />

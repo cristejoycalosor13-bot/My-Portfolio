@@ -49,7 +49,7 @@ export default function Hero() {
         >
           {/* AI badge */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blush-200 to-rose-200 px-4 py-1.5 rounded-full text-sm font-semibold text-rose-800 mb-4 shadow-sm border border-rose-200">
-            ✦ AI-Powered Designer ✦
+            🌸 AI-Powered Designer 🌸
           </div>
 
           {/* Eyebrow */}
@@ -131,7 +131,7 @@ export default function Hero() {
               <div className="text-5xl">📸</div>
             </div>
             <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
-              ✦ Creative Soul
+              🌸 Creative Soul
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export default function Hero() {
               <div className="text-5xl">🎨</div>
             </div>
             <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
-              ✦ Designer
+              🌸 Designer
             </div>
           </div>
 
