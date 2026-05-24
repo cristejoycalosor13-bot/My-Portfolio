@@ -114,60 +114,27 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* — Photo cards column — */}
+        {/* — Photo column — */}
         <motion.div
           initial={{ opacity: 0, scale: 0.88 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
-          className="flex justify-center items-center relative"
-          style={{ height: '480px' }}
+          className="flex justify-center"
         >
-          {/* Left card */}
-          <div
-            className="absolute bg-gradient-to-br from-blush-200 to-rose-200 rounded-2xl border-4 border-white shadow-gold flex items-center justify-center overflow-hidden"
-            style={{ width: '160px', height: '210px', top: '80px', left: '5%', transform: 'rotate(4deg)', zIndex: 2 }}
-          >
-            <div className="text-center">
-              <div className="text-5xl">📸</div>
+          <div className="relative w-full max-w-sm">
+            <div
+              className="absolute inset-0 bg-blush-100 rounded-2xl"
+              style={{ transform: 'rotate(-3deg) scale(1.04)' }}
+            />
+            <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-gold aspect-[4/5]">
+              <img src={headshot} alt="Criste Joy Calosor" className="w-full h-full object-cover object-top" />
             </div>
-            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
-              🌸 Creative Soul
+            <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-blush-200 to-amber-100 rounded-2xl px-4 py-3 shadow-gold text-center border border-rose-100">
+              <span className="font-display font-black text-3xl text-rose-900 block leading-none">2+</span>
+              <span className="font-body text-xs font-semibold uppercase tracking-wider text-rose-500 leading-tight">
+                Years of<br />Experience
+              </span>
             </div>
-          </div>
-
-          {/* Center card (main) — uses real headshot */}
-          <div
-            className="absolute rounded-2xl border-4 border-white shadow-gold overflow-hidden"
-            style={{ width: '200px', height: '265px', top: '20px', left: '50%', transform: 'translateX(-50%) rotate(-3deg)', zIndex: 3 }}
-          >
-            <img src={headshot} alt="Criste Joy Calosor" className="w-full h-full object-cover" />
-            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-600 shadow-sm whitespace-nowrap border border-rose-100">
-              Criste Joy
-            </div>
-          </div>
-
-          {/* Right card */}
-          <div
-            className="absolute bg-gradient-to-br from-blush-200 to-blush-100 rounded-2xl border-4 border-white shadow-glass flex items-center justify-center overflow-hidden"
-            style={{ width: '155px', height: '205px', top: '100px', right: '2%', transform: 'rotate(-5deg)', zIndex: 2 }}
-          >
-            <div className="text-center">
-              <div className="text-5xl">🎨</div>
-            </div>
-            <div className="absolute -bottom-3 -right-2 bg-white px-3 py-1 rounded-full text-xs font-semibold text-rose-500 shadow-sm whitespace-nowrap border border-rose-100">
-              🌸 Designer
-            </div>
-          </div>
-
-          {/* Experience badge */}
-          <div
-            className="absolute bg-gradient-to-br from-blush-200 to-amber-100 rounded-2xl px-4 py-3 shadow-gold text-center z-10 border border-rose-100"
-            style={{ bottom: '30px', left: '0' }}
-          >
-            <span className="font-display font-black text-3xl text-rose-900 block leading-none">2+</span>
-            <span className="font-body text-xs font-semibold uppercase tracking-wider text-rose-500 leading-tight">
-              Years of<br />Experience
-            </span>
           </div>
         </motion.div>
       </div>
