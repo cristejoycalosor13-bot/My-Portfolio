@@ -49,13 +49,13 @@ export default function Hero() {
         >
           {/* AI badge */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blush-200 to-rose-200 px-4 py-1.5 rounded-full text-sm font-semibold text-rose-800 mb-4 shadow-sm border border-rose-200">
-            🌸 AI-Powered Designer 🌸
+            🌸 Digital Generalist 🌸
           </div>
 
           {/* Eyebrow */}
           <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-rose-400 mb-3 flex items-center gap-2">
             <span className="inline-block w-8 h-px bg-rose-400" />
-            Visual Artist &amp; Creative Mind
+            Creative Virtual Assistant &amp; Designer
           </p>
 
           {/* Name */}
@@ -67,14 +67,14 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="font-display italic text-lg text-rose-400 mb-5 leading-relaxed">
-            "Where aesthetics meet algorithm —<br className="hidden md:block" />
-            I don't just design, I dream in pixels."
+            "I design, I organize, I show up — your all-in-one<br className="hidden md:block" />
+            creative partner."
           </p>
 
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
-            A <strong className="font-semibold text-rose-600">graphic designer who speaks fluent AI</strong> — blending human intuition with cutting-edge tools to craft visuals that don't just look beautiful, they <em>feel</em> unforgettable. Currently pursuing a degree in{' '}
-            <strong className="font-semibold text-rose-600">Financial Management</strong>, and already leaving a mark on the creative industry.
+            A <strong className="font-semibold text-rose-600">Digital Generalist</strong> and{' '}
+            <strong className="font-semibold text-rose-600">Creative Virtual Assistant</strong> from Cebu, Philippines — turning ideas into beautiful visuals, keeping operations running smoothly, and doing it all with heart. Graphic design, web design, content creation, scheduling, admin support — consider it handled.
           </p>
 
           {/* CTAs */}
