@@ -49,13 +49,13 @@ export default function Hero() {
         >
           {/* AI badge */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blush-200 to-rose-200 px-4 py-1.5 rounded-full text-sm font-semibold text-rose-800 mb-4 shadow-sm border border-rose-200">
-            🌸 Digital Generalist 🌸
+            🌸 Creative Virtual Assistant 🌸
           </div>
 
           {/* Eyebrow */}
           <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-rose-400 mb-3 flex items-center gap-2">
             <span className="inline-block w-8 h-px bg-rose-400" />
-            Creative Virtual Assistant &amp; Designer
+            DESIGNER • CONTENT CREATOR • ORGANIZER
           </p>
 
           {/* Name */}
@@ -67,14 +67,15 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="font-display italic text-lg text-rose-400 mb-5 leading-relaxed">
-            "I design, I organize, I show up — your all-in-one<br className="hidden md:block" />
-            creative partner."
+            "Your ideas, your content, your daily tasks —<br className="hidden md:block" />
+            beautifully handled."
           </p>
 
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
-            A <strong className="font-semibold text-rose-600">Digital Generalist</strong> and{' '}
-            <strong className="font-semibold text-rose-600">Creative Virtual Assistant</strong> from Cebu, Philippines — turning ideas into beautiful visuals, keeping operations running smoothly, and doing it all with heart. Graphic design, web design, content creation, scheduling, admin support — consider it handled.
+            I help business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and admin assistance.
+            <br /><br />
+            Whether it's visuals, websites, content, or behind-the-scenes organization — consider it handled.
           </p>
 
           {/* CTAs */}

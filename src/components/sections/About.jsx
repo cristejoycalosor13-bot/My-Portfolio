@@ -48,11 +48,13 @@ export default function About() {
           <FloralDivider className="mb-5" />
 
           <p className="font-body text-rose-700 leading-relaxed mb-5 text-sm md:text-base">
-            A <strong className="font-semibold text-rose-600">visual-first designer</strong> from Cebu, Philippines — my strength is turning ideas into beautiful, eye-catching visuals. I love working with brands, creating content, and finding creative solutions fast.
+            I help brands look polished, stay organized, and show up consistently online through thoughtful visuals, clear content, and reliable support.
+            <br /><br />
+            Whether it's design, content, scheduling, or behind-the-scenes tasks — my goal is simple: make everything feel <strong className="font-semibold text-rose-600">clear, beautiful, and handled.</strong>
           </p>
 
           <blockquote className="border-l-4 border-rose-300 pl-4 mb-6 italic font-display text-rose-500 text-sm leading-relaxed">
-            "I may be new to the industry, but I learn fast, I design with heart, and I show up ready."
+            "Creative support for brands that need beauty, clarity, and consistency."
           </blockquote>
 
           {/* Open to */}
