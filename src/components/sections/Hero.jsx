@@ -75,7 +75,7 @@ export default function Hero() {
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
             I help business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and admin assistance.
             <br /><br />
-            Whether it's visuals, websites, content, or behind-the-scenes organization — consider it handled.
+            Whether it's design, content, scheduling, or behind-the-scenes tasks, I focus on making every detail feel clear, organized, and thoughtfully done.
           </p>
 
           {/* CTAs */}
