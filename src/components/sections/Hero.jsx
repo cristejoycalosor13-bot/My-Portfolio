@@ -73,9 +73,12 @@ export default function Hero() {
 
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
-            I help business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and admin assistance.
+            <strong className="font-semibold text-rose-600">Step-by-Step.</strong>
             <br /><br />
-            Whether it's design, content, scheduling, or behind-the-scenes tasks, I focus on making every detail feel clear, organized, and thoughtfully done.
+            Choose yourself today. Envision your long-term goal. Multiply your "NOW," it compounds and becomes a year.
+            <br /><br />
+            Don't wait for the perfect time. You get to create it.<br />
+            <strong className="font-semibold text-rose-600">Start NOW.</strong>
           </p>
 
           {/* CTAs */}
