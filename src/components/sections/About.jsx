@@ -47,12 +47,6 @@ export default function About() {
           <h2 className="section-title mb-3">Hi, I'm Criste Joy!</h2>
           <FloralDivider className="mb-5" />
 
-          <p className="font-body text-rose-700 leading-relaxed mb-5 text-sm md:text-base">
-            I help brands look polished, stay organized, and show up consistently online through thoughtful visuals, clear content, and reliable support.
-            <br /><br />
-            Whether it's design, content, scheduling, or behind-the-scenes tasks — my goal is simple: make everything feel <strong className="font-semibold text-rose-600">clear, beautiful, and handled.</strong>
-          </p>
-
           <blockquote className="border-l-4 border-rose-300 pl-4 mb-6 italic font-display text-rose-500 text-sm leading-relaxed">
             "Creative support for brands that need beauty, clarity, and consistency."
           </blockquote>
