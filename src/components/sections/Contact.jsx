@@ -57,7 +57,9 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault()
     const subject = encodeURIComponent(form.subject || 'Message from Portfolio')
-    const body = encodeURIComponent(`Greetings Joy!\n\n${form.message}\n\nBest regards,\n${form.name}`)
+    const body = encodeURIComponent(
+      `Greetings Joy!\n\n${form.message}\n\n--\nBest regards,\n${form.name}\n${form.email}`
+    )
     window.open(`mailto:cristejoycalosor13@gmail.com?subject=${subject}&body=${body}`)
     setSubmitted(true)
   }
