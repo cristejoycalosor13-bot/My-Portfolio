@@ -10,6 +10,7 @@ const seekingRoles = [
   'Content Creator',
   'Web Developer/Designer',
   'Recruiter',
+  'Anything with Honor',
 ]
 
 const traits = ['Fast Learner', 'Visual Thinker', 'Detail-Oriented', 'Curious & Adaptable']

@@ -49,13 +49,13 @@ export default function Hero() {
         >
           {/* AI badge */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blush-200 to-rose-200 px-4 py-1.5 rounded-full text-sm font-semibold text-rose-800 mb-4 shadow-sm border border-rose-200">
-            🌸 Creative Virtual Assistant 🌸
+            🌸 Creative Freelancer 🌸
           </div>
 
           {/* Eyebrow */}
           <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-rose-400 mb-3 flex items-center gap-2">
             <span className="inline-block w-8 h-px bg-rose-400" />
-            DESIGNER • CONTENT CREATOR • ORGANIZER
+            Graphic &amp; Web Design | Social Media | Branding | Virtual Assistance
           </p>
 
           {/* Name */}
@@ -67,15 +67,17 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="font-display italic text-lg text-rose-400 mb-5 leading-relaxed">
-            "Your ideas, your content, your daily tasks —<br className="hidden md:block" />
-            beautifully handled."
+            "Your ideas, your content, your daily tasks.<br className="hidden md:block" />
+            Beautifully handled."
           </p>
 
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
-            I help business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and admin assistance.
+            I'm a creative freelancer helping business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and virtual assistance.
             <br /><br />
-            I'm <strong className="font-semibold text-rose-600">obsessed with the work</strong> — and whether it's design, content, scheduling, or behind-the-scenes tasks, I focus on making every detail feel clear, organized, and thoughtfully done.
+            I'm <strong className="font-semibold text-rose-600">obsessed with the work.</strong> From designing visuals and planning content to organizing schedules, managing social media, and handling behind-the-scenes tasks, I love making every detail feel clear, polished, and thoughtfully done.
+            <br /><br />
+            With creativity, care, and a little bit of magic, I help bring your ideas to life while making your workload feel lighter.
           </p>
 
           {/* CTAs */}
