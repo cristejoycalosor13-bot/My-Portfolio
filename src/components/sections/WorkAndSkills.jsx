@@ -212,6 +212,57 @@ function SkillModal({ skill, onClose }) {
   )
 }
 
+/* ── External Site Preview Modal ────────────────────────────── */
+function ExternalPreviewModal({ exp, onClose }) {
+  return (
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="bg-white rounded-3xl w-full max-w-sm overflow-hidden shadow-2xl"
+        initial={{ scale: 0.88, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.88, y: 20 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 26 }}
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="relative h-36 overflow-hidden">
+          <img src={exp.image} alt={exp.company} className="w-full h-full object-cover" />
+          <div className={`absolute inset-0 bg-gradient-to-t ${exp.gradient}`} />
+          <div className="absolute bottom-3 left-4">
+            <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/30">
+              {exp.badge}
+            </span>
+            <h3 className="font-display text-white text-xl italic font-bold mt-1">{exp.company}</h3>
+          </div>
+          <button
+            onClick={onClose}
+            className="absolute top-3 right-3 w-7 h-7 bg-white/15 hover:bg-white/30 rounded-full flex items-center justify-center text-white text-sm transition-colors backdrop-blur-sm"
+          >
+            ✕
+          </button>
+        </div>
+        <div className="p-5">
+          <p className="font-body text-rose-400 text-xs uppercase tracking-wider font-semibold mb-1">{exp.role} · {exp.period}</p>
+          <p className="font-body text-rose-700 text-sm leading-relaxed mb-5">{exp.description}</p>
+          <a
+            href={exp.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+          >
+            Visit site →
+          </a>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 /* ── Sub-section label ───────────────────────────────────────── */
 function SubLabel({ children }) {
   return (
@@ -229,13 +280,14 @@ function SubLabel({ children }) {
 export default function WorkAndSkills() {
   const [coeOpen, setCoeOpen]           = useState(false)
   const [videoExp, setVideoExp]         = useState(null)
+  const [previewExp, setPreviewExp]     = useState(null)
   const [activeSkill, setActiveSkill]   = useState(null)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSlides, setLightboxSlides] = useState([])
 
   function handleExpClick(exp) {
     if (exp.linkType === 'external') {
-      window.open(exp.link, '_blank', 'noopener,noreferrer')
+      setPreviewExp(exp)
     } else if (exp.linkType === 'videos') {
       setVideoExp(exp)
     } else if (exp.linkType === 'coe') {
@@ -265,7 +317,7 @@ export default function WorkAndSkills() {
 
         {/* ── Experience cards ── */}
         <SubLabel>Experience</SubLabel>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12">
           {experiences.map((exp, i) => (
             <ScrollReveal key={exp.id} delay={i * 0.08}>
               <motion.div
@@ -356,6 +408,10 @@ export default function WorkAndSkills() {
 
       <AnimatePresence>
         {coeOpen && <COECertificate onClose={() => setCoeOpen(false)} />}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {previewExp && <ExternalPreviewModal exp={previewExp} onClose={() => setPreviewExp(null)} />}
       </AnimatePresence>
 
       <AnimatePresence>
