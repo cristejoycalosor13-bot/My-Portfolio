@@ -195,17 +195,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Traits */}
-          <div className="flex flex-wrap gap-2">
-            {traits.map(t => (
-              <span
-                key={t}
-                className="text-rose-400 text-xs font-body px-2.5 py-1 bg-rose-50 rounded-full border border-rose-100"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
         </ScrollReveal>
       </div>
     </section>
