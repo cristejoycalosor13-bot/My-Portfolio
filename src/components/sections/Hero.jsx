@@ -53,9 +53,9 @@ export default function Hero() {
           </div>
 
           {/* Eyebrow */}
-          <p className="font-body text-xs font-semibold tracking-[0.28em] uppercase text-rose-400 mb-3 flex items-center gap-2">
-            <span className="inline-block w-8 h-px bg-rose-400" />
-            Create · Manage · Assist
+          <p className="font-body text-xs font-semibold text-rose-400 mb-3 flex items-center gap-2">
+            <span className="inline-block w-8 h-px bg-rose-400 flex-shrink-0" />
+            Freelance Digital Designer &nbsp;|&nbsp; Web Designer &nbsp;|&nbsp; Social Media Content Support
           </p>
 
           {/* Name */}
@@ -73,11 +73,9 @@ export default function Hero() {
 
           {/* Description */}
           <p className="font-body text-rose-700 leading-relaxed mb-7 max-w-md text-sm md:text-base">
-            I'm a creative freelancer helping business owners stay organized, visible, and consistent online through creative design, content support, social media management, scheduling, and virtual assistance.
+            Creative and detail-oriented digital freelancer skilled in graphic design, basic video editing, website design and development, social media support, content scheduling, organization, and recruitment support.
             <br /><br />
-            I'm <strong className="font-semibold text-rose-600">obsessed with the work.</strong> From designing visuals and planning content to organizing schedules, managing social media, and handling behind-the-scenes tasks, I love making every detail feel clear, polished, and thoughtfully done.
-            <br /><br />
-            With creativity, care, and a little bit of magic, I help bring your ideas to life while making your workload feel lighter.
+            I help small businesses create clean visuals, organize online content, improve their web presence, and manage digital tasks — <strong className="font-semibold text-rose-600">efficiently and with care.</strong>
           </p>
 
           {/* CTAs */}

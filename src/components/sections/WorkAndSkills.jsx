@@ -317,7 +317,7 @@ export default function WorkAndSkills() {
               <div className="flex-1 text-center px-4 pb-6 md:pb-0">
                 <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🛠 Tools &amp; Software</p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
+                  {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'HTML', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Facebook', 'Instagram', 'TikTok', 'YouTube', 'Notion', 'Trello', 'Figma'].map(tool => (
                     <span key={tool} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
                       {tool}
                     </span>
