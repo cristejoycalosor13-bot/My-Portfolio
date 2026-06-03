@@ -334,7 +334,7 @@ export default function WorkAndSkills() {
                 <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🌸 Strengths</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
-                    <span key={s} className="text-rose-500 text-xs font-body px-3 py-1.5 bg-rose-50 rounded-full border border-rose-100">
+                    <span key={s} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
                       {s}
                     </span>
                   ))}
