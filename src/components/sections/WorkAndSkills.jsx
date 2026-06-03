@@ -4,7 +4,6 @@ import ScrollReveal from '../ui/ScrollReveal'
 import PortfolioLightbox from '../ui/PortfolioLightbox'
 import FloralDivider from '../../assets/svgs/FloralDivider'
 import { experiences } from '../../data/experienceData'
-import { skillGroups } from '../../data/skillsData'
 
 /* ── Video Gallery Modal ─────────────────────────────────────── */
 function VideoModal({ videos, siteLink, onClose }) {
@@ -162,56 +161,6 @@ function COECertificate({ onClose }) {
   )
 }
 
-/* ── Skill Detail Modal ──────────────────────────────────────── */
-function SkillModal({ skill, onClose }) {
-  return (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={onClose}
-    >
-      <motion.div
-        className="bg-white rounded-3xl max-w-sm w-full overflow-hidden shadow-2xl"
-        initial={{ scale: 0.85, y: 24 }}
-        animate={{ scale: 1, y: 0 }}
-        exit={{ scale: 0.85, y: 24 }}
-        transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-        onClick={e => e.stopPropagation()}
-      >
-        <div className="relative h-36 overflow-hidden">
-          <img src={skill.image} alt={skill.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-rose-950/80 via-rose-800/30 to-transparent" />
-          <div className="absolute bottom-3 left-4 flex items-center gap-2.5">
-            <span className="text-3xl">{skill.icon}</span>
-            <h3 className="font-display text-white text-xl italic font-bold">{skill.title}</h3>
-          </div>
-          <button
-            onClick={onClose}
-            className="absolute top-3 right-3 w-7 h-7 bg-white/15 hover:bg-white/30 rounded-full flex items-center justify-center text-white text-sm transition-colors backdrop-blur-sm"
-          >
-            ✕
-          </button>
-        </div>
-        <div className="p-5">
-          <p className="font-body text-rose-400 italic text-sm mb-4">{skill.description}</p>
-          <div className="flex flex-wrap gap-2">
-            {skill.tags.map(tag => (
-              <span
-                key={tag}
-                className="bg-blush-50 text-rose-600 border border-rose-200 px-3 py-1.5 rounded-full text-xs font-medium font-body"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  )
-}
-
 /* ── External Site Preview Modal ────────────────────────────── */
 function ExternalPreviewModal({ exp, onClose }) {
   return (
@@ -281,7 +230,6 @@ export default function WorkAndSkills() {
   const [coeOpen, setCoeOpen]           = useState(false)
   const [videoExp, setVideoExp]         = useState(null)
   const [previewExp, setPreviewExp]     = useState(null)
-  const [activeSkill, setActiveSkill]   = useState(null)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxSlides, setLightboxSlides] = useState([])
 
@@ -359,40 +307,30 @@ export default function WorkAndSkills() {
           ))}
         </div>
 
-        {/* ── Skill cards ── */}
+        {/* ── Skills & Expertise pills ── */}
         <SubLabel>Skills &amp; Expertise</SubLabel>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {skillGroups.map((skill, i) => (
-            <ScrollReveal key={skill.id} delay={i * 0.07}>
-              <motion.div
-                className="relative rounded-2xl overflow-hidden cursor-pointer group shadow-glass hover:shadow-glass-md transition-shadow"
-                style={{ aspectRatio: '4/3' }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                transition={{ duration: 0.22 }}
-                onClick={() => setActiveSkill(skill)}
-              >
-                <img
-                  src={skill.image}
-                  alt={skill.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-rose-950/85 via-rose-900/30 to-transparent" />
-
-                <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <div className="text-2xl mb-1">{skill.icon}</div>
-                  <h3 className="font-display text-white text-sm font-bold leading-tight">{skill.title}</h3>
-                </div>
-
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <span className="bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full border border-white/30 font-medium">
-                    🌸 Tap to explore
-                  </span>
-                </div>
-              </motion.div>
-            </ScrollReveal>
-          ))}
-        </div>
+        <ScrollReveal className="space-y-5">
+          <div>
+            <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Tools &amp; Software</p>
+            <div className="flex flex-wrap gap-2">
+              {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Google Workspace', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
+                <span key={tool} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Strengths</p>
+            <div className="flex flex-wrap gap-2">
+              {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
+                <span key={s} className="text-rose-400 text-xs font-body px-3 py-1.5 bg-rose-50 rounded-full border border-rose-100">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
 
       {/* Modals */}
@@ -412,10 +350,6 @@ export default function WorkAndSkills() {
 
       <AnimatePresence>
         {previewExp && <ExternalPreviewModal exp={previewExp} onClose={() => setPreviewExp(null)} />}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {activeSkill && <SkillModal skill={activeSkill} onClose={() => setActiveSkill(null)} />}
       </AnimatePresence>
 
       <PortfolioLightbox
