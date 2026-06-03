@@ -309,25 +309,37 @@ export default function WorkAndSkills() {
 
         {/* ── Skills & Expertise pills ── */}
         <SubLabel>Skills &amp; Expertise</SubLabel>
-        <ScrollReveal className="space-y-5 text-center">
-          <div>
-            <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Tools &amp; Software</p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
-                <span key={tool} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
-                  {tool}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Strengths</p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
-                <span key={s} className="text-rose-400 text-xs font-body px-3 py-1.5 bg-rose-50 rounded-full border border-rose-100">
-                  {s}
-                </span>
-              ))}
+        <ScrollReveal>
+          <div className="bg-white/70 backdrop-blur-sm border border-rose-100 rounded-3xl shadow-glass p-6 md:p-8 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Tools */}
+              <div className="text-center">
+                <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🛠 Tools &amp; Software</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
+                    <span key={tool} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Divider on mobile, vertical line on desktop */}
+              <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px bg-rose-100" style={{position: 'relative', width: '1px', background: 'transparent'}}>
+                <div className="absolute inset-y-0 left-0 w-px bg-rose-100" />
+              </div>
+
+              {/* Strengths */}
+              <div className="text-center border-t border-rose-100 pt-6 md:border-t-0 md:pt-0 md:border-l md:border-rose-100 md:pl-8">
+                <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🌸 Strengths</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
+                    <span key={s} className="text-rose-500 text-xs font-body px-3 py-1.5 bg-rose-50 rounded-full border border-rose-100">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </ScrollReveal>
