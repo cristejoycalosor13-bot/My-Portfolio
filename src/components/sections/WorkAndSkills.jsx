@@ -311,9 +311,10 @@ export default function WorkAndSkills() {
         <SubLabel>Skills &amp; Expertise</SubLabel>
         <ScrollReveal>
           <div className="bg-white/70 backdrop-blur-sm border border-rose-100 rounded-3xl shadow-glass p-6 md:p-8 max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Tools */}
-              <div className="text-center">
+            <div className="flex flex-col md:flex-row gap-0">
+
+              {/* Tools — left */}
+              <div className="flex-1 text-center px-4 pb-6 md:pb-0">
                 <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🛠 Tools &amp; Software</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
@@ -324,13 +325,12 @@ export default function WorkAndSkills() {
                 </div>
               </div>
 
-              {/* Divider on mobile, vertical line on desktop */}
-              <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px bg-rose-100" style={{position: 'relative', width: '1px', background: 'transparent'}}>
-                <div className="absolute inset-y-0 left-0 w-px bg-rose-100" />
-              </div>
+              {/* Divider */}
+              <div className="w-px bg-rose-100 self-stretch hidden md:block mx-2" />
+              <div className="h-px bg-rose-100 w-full md:hidden mb-6" />
 
-              {/* Strengths */}
-              <div className="text-center border-t border-rose-100 pt-6 md:border-t-0 md:pt-0 md:border-l md:border-rose-100 md:pl-8">
+              {/* Strengths — right */}
+              <div className="flex-1 text-center px-4">
                 <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-widest mb-4">🌸 Strengths</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
@@ -340,6 +340,7 @@ export default function WorkAndSkills() {
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </ScrollReveal>
