@@ -309,11 +309,11 @@ export default function WorkAndSkills() {
 
         {/* ── Skills & Expertise pills ── */}
         <SubLabel>Skills &amp; Expertise</SubLabel>
-        <ScrollReveal className="space-y-5">
+        <ScrollReveal className="space-y-5 text-center">
           <div>
             <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Tools &amp; Software</p>
-            <div className="flex flex-wrap gap-2">
-              {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Google Workspace', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
+            <div className="flex flex-wrap gap-2 justify-center">
+              {['Canva', 'Adobe Firefly', 'CapCut', 'Midjourney', 'ChatGPT', 'Gemini', 'Claude', 'VS Code', 'Codex', 'Antigravity', 'Google Workspace', 'Google Sheets / Excel', 'Meta Business Suite', 'Notion', 'Trello', 'Figma'].map(tool => (
                 <span key={tool} className="bg-gradient-to-r from-blush-100 to-rose-100 text-rose-700 border border-rose-200 text-xs font-medium px-3 py-1.5 rounded-full font-body">
                   {tool}
                 </span>
@@ -322,7 +322,7 @@ export default function WorkAndSkills() {
           </div>
           <div>
             <p className="font-body text-xs font-semibold text-rose-400 uppercase tracking-wider mb-3">Strengths</p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {['Creative Thinking', 'Attention to Detail', 'Time Management', 'Team Collaboration', 'Client Communication', 'Adaptability', 'Active Listening', 'Fast Learner', 'Organized'].map(s => (
                 <span key={s} className="text-rose-400 text-xs font-body px-3 py-1.5 bg-rose-50 rounded-full border border-rose-100">
                   {s}
