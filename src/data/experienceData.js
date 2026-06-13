@@ -66,13 +66,6 @@ export const experiences = [
     badge: '🏥 Healthcare VA',
     note: 'Scheduling · Admin Support',
     link: null,
-    linkType: 'gallery',
-    cta: 'View work →',
-    gallery: [
-      { src: 'https://placehold.co/800x600/f2b8c6/3d2535?text=Brand+Collateral', alt: 'Brand Collateral' },
-      { src: 'https://placehold.co/800x600/d4b8e0/3d2535?text=Medical+Marketing', alt: 'Medical Marketing' },
-      { src: 'https://placehold.co/800x600/fce4ec/6b3d5e?text=Social+Media+Graphics', alt: 'Social Media Graphics' },
-      { src: 'https://placehold.co/800x600/f7c5a0/3d2535?text=Healthcare+Visuals', alt: 'Healthcare Visuals' },
-    ],
+    linkType: null,
   },
 ]

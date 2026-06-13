@@ -6,6 +6,8 @@ import FloralDivider from '../../assets/svgs/FloralDivider'
 import FloralCorner from '../../assets/svgs/FloralCorner'
 import { PHONE_DISPLAY, PHONE_HREF, EMAIL, EMAIL_HREF, LOCATION } from '../../data/contactData'
 
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL
+
 const contactInfo = [
   {
     icon: (
@@ -49,17 +51,34 @@ const inputClass =
 export default function Contact() {
   const [form, setForm]           = useState({ name: '', email: '', subject: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus]       = useState('idle') // 'idle' | 'sending' | 'error'
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    const subject = encodeURIComponent(form.subject || 'Message from Portfolio')
-    const body = encodeURIComponent(`Greetings Joy!\n\n${form.message}\n\nBest regards,\n${form.name}`)
-    window.open(`mailto:cristejoycalosor13@gmail.com?subject=${subject}&body=${body}`)
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    form.name,
+          email:   form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -198,9 +217,25 @@ export default function Contact() {
                       />
                     </div>
 
-                    <button type="submit" className="btn-primary w-full text-center">
-                      Send Message
+                    <button
+                      type="submit"
+                      disabled={status === 'sending'}
+                      className="btn-primary w-full text-center disabled:opacity-60 disabled:cursor-not-allowed"
+                    >
+                      {status === 'sending' ? 'Sending…' : 'Send Message'}
                     </button>
+
+                    {status === 'error' && (
+                      <p className="font-body text-xs text-rose-600 text-center mt-1">
+                        Something went wrong. Please try via email:{' '}
+                        <a
+                          href="mailto:cristejoycalosor13@gmail.com"
+                          className="underline hover:text-rose-800 transition-colors"
+                        >
+                          cristejoycalosor13@gmail.com
+                        </a>
+                      </p>
+                    )}
                   </motion.form>
                 )}
               </AnimatePresence>
